@@ -9,6 +9,8 @@ data class Movie (
     val overview: String,
 ) {
 
+    val posterImageUrl = "https://image.tmdb.org/t/p/w342/$posterPath"
+
     companion object {
 
         fun fromJsonArray(movieJSONArray: JSONArray): List<Movie> {

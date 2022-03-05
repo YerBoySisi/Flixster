@@ -1,13 +1,17 @@
 package com.twoccs.flixster
 
+import android.os.Parcelable
+import kotlinx.android.parcel.Parcelize
 import org.json.JSONArray
 
+@Parcelize
 data class Movie (
     val movieId: Int,
     val posterPath: String,
     val title: String,
     val overview: String,
-) {
+    var voteAverage: Double,
+) : Parcelable {
 
     val posterImageUrl = "https://image.tmdb.org/t/p/w342/$posterPath"
 
@@ -25,7 +29,8 @@ data class Movie (
                         movieJSON.getInt("id"),
                         movieJSON.getString("poster_path"),
                         movieJSON.getString("title"),
-                        movieJSON.getString("overview")
+                        movieJSON.getString("overview"),
+                        movieJSON.getDouble("vote_average")
                     )
                 )
 

@@ -1,65 +1,55 @@
-## Flix Part 2
+## Flixster
 
-### User Stories
+**Flixster** shows the latest movies currently playing in theaters. The app utilizes the Movie Database API to display images and basic information about these movies to the user.
 
-#### REQUIRED (10pts)
+Time spent: **1** hours spent in total
 
-- [x] (8pts) Expose details of movie (ratings using RatingBar, popularity, and synopsis) in a separate activity.
-- [ ] (2pts) Allow video posts to be played in full-screen using the YouTubePlayerView.
+## User Stories
 
-#### BONUS
+The following **required** functionality is completed:
 
-- [ ] Implement a shared element transition when user clicks into the details of a movie (1 point).
-- [ ] Trailers for popular movies are played automatically when the movie is selected (1 point).
-  - [ ] When clicking on a popular movie (i.e. a movie voted for more than 5 stars) the video should be played immediately.
-  - [ ] Less popular videos rely on the detailed page should show an image preview that can initiate playing a YouTube video.
-- [ ] Add a play icon overlay to popular movies to indicate that the movie can be played (1 point).
-- [ ] Apply data binding for views to help remove boilerplate code. (1 point)
-- [ ] Add a rounded corners for the images using the Glide transformations. (1 point)
+* [x] User can **scroll through current movies** from the Movie Database API
+* [x] Display a nice default [placeholder graphic](https://guides.codepath.org/android/Displaying-Images-with-the-Glide-Library#advanced-usage) for each image during loading
+* [x] For each movie displayed, user can see the following details:
+  * [x] Title, Poster Image, Overview (Portrait mode)
+  * [x] Title, Backdrop Image, Overview (Landscape mode)
+* [x] Allow user to view details of the movie including ratings within a separate activity
 
-### App Walkthough GIF
+The following **stretch** features are implemented:
 
-https://www.youtube.com/watch?v=Lb48vI5hqPQ
+* [x] Improved the user interface by experimenting with styling and coloring.
+* [x] Apply rounded corners for the poster or background images using [Glide transformations](https://guides.codepath.org/android/Displaying-Images-with-the-Glide-Library#transformations)
+* [ ] Apply the popular [View Binding annotation library](http://guides.codepath.org/android/Reducing-View-Boilerplate-with-ViewBinding) to reduce boilerplate code.
+* [ ] Allow video trailers to be played in full-screen using the YouTubePlayerView from the details screen.
 
-### Notes
+## Video Walkthrough
 
-No challenges were met developing this app.
+Here's a walkthrough of implemented user stories:
+
+<img src='http://i.imgur.com/link/to/your/gif/file.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
+
+
+## Notes
+
+No notable challenges were encountered in developing this app.
 
 ## Open-source libraries used
-- [Android Async HTTP](https://github.com/codepath/CPAsyncHttpClient) - Simple asynchronous HTTP requests with JSON parsing
+
+- [Android Async HTTP](https://github.com/loopj/android-async-http) - Simple asynchronous HTTP requests with JSON parsing
 - [Glide](https://github.com/bumptech/glide) - Image loading and caching library for Android
 
-# Flix
-Flix is an app that allows users to browse movies from the [The Movie Database API](http://docs.themoviedb.apiary.io/#).
+## License
 
----
+    Copyright [2022] [Sisiame B. Sakasamo]
 
-## Flix Part 1
+    Licensed under the Apache License, Version 2.0 (the "License");
+    you may not use this file except in compliance with the License.
+    You may obtain a copy of the License at
 
-### User Stories
+        http://www.apache.org/licenses/LICENSE-2.0
 
-#### REQUIRED (10pts)
-- [x] (10pts) User can view a list of movies (title, poster image, and overview) currently playing in theaters from the Movie Database API.
-
-#### BONUS
-- [ ] (2pts) Views should be responsive for both landscape/portrait mode.
-   - [ ] (1pt) In portrait mode, the poster image, title, and movie overview is shown.
-   - [ ] (1pt) In landscape mode, the rotated alternate layout should use the backdrop image instead and show the title and movie overview to the right of it.
-
-- [ ] (2pts) Display a nice default [placeholder graphic](https://guides.codepath.org/android/Displaying-Images-with-the-Glide-Library#advanced-usage) for each image during loading
-- [ ] (2pts) Improved the user interface by experimenting with styling and coloring.
-- [ ] (2pts) For popular movies (i.e. a movie voted for more than 5 stars), the full backdrop image is displayed. Otherwise, a poster image, the movie title, and overview is listed. Use Heterogenous RecyclerViews and use different ViewHolder layout files for popular movies and less popular ones.
-
-### App Walkthough GIF
-
-https://im.ezgif.com/tmp/ezgif-1-1b50e66fb5.gif
-
-<img src="https://im.ezgif.com/tmp/ezgif-1-1b50e66fb5.gif" width=250><br>
-
-### Notes
-The only trouble with this app was the Kotlin and Gradle configuration in Android Studio. Other than this, the app was seamless to develop.
-
-### Open-source libraries used
-
-- [Android Async HTTP](https://github.com/codepath/CPAsyncHttpClient) - Simple asynchronous HTTP requests with JSON parsing
-- [Glide](https://github.com/bumptech/glide) - Image loading and caching library for Androids
+    Unless required by applicable law or agreed to in writing, software
+    distributed under the License is distributed on an "AS IS" BASIS,
+    WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+    See the License for the specific language governing permissions and
+    limitations under the License.

@@ -8,12 +8,14 @@ import org.json.JSONArray
 data class Movie (
     val movieId: Int,
     val posterPath: String,
+    val backdropPath: String,
     val title: String,
     val overview: String,
     var voteAverage: Double,
 ) : Parcelable {
 
     val posterImageUrl = "https://image.tmdb.org/t/p/w342/$posterPath"
+    val backdropImageUrl = "https://image.tmdb.org/t/p/w342/$backdropPath"
 
     companion object {
 
@@ -28,6 +30,7 @@ data class Movie (
                     Movie(
                         movieJSON.getInt("id"),
                         movieJSON.getString("poster_path"),
+                        movieJSON.getString("backdrop_path"),
                         movieJSON.getString("title"),
                         movieJSON.getString("overview"),
                         movieJSON.getDouble("vote_average")
